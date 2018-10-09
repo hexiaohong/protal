@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <div id="slideBox" class="slideBox hid">
+      <div class="hd">
+        <ul>
+          <stl:contents channelIndex="Banner" totalNum="4">
+            <li></li>
+          </stl:contents>
+        </ul>
+      </div>
+      <div class="bd">
+        <ul>
+          <stl:contents channelIndex="Banner" totalNum="4">
+            <li> <a href="javascript:;" target="_blank">
+              <div class="divContent{Content.ItemIndex} bdimg" style="background: url({Content.ImageUrl});" ></div>
+              </a> </li>
+          </stl:contents>
+        </ul>
+      </div>
+      <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div>
+    <stl:include file="/include/header.html"></stl:include>
+    <div class="clearfix"></div>
+    <div id="slideBox" class="slideBox underslideBox">
+      <div class="hd">
+        <ul>
+          <stl:contents channelIndex="Banner" totalNum="4">
+            <li></li>
+          </stl:contents>
+        </ul>
+      </div>
+      <div class="bd underhd">
+        <ul>
+          <stl:contents channelIndex="Banner" totalNum="4">
+            <li> <a href="javascript:;" target="_blank"> <img src="{Content.ImageUrl}"> </a> </li>
+          </stl:contents>
+        </ul>
+      </div>
+      <a class="prev" href="javascript:void(0)"></a> 
+      <a class="next" href="javascript:void(0)"></a> </div>
+    <script id="jsID" type="text/javascript">
+      var ary = location.href.split("&");
+      jQuery(".slideBox").slide({ mainCell: ".bd ul", effect: ary[1], autoPlay: true, trigger: ary[3], easing: ary[4], delayTime: ary[10], mouseOverStop: ary[6], pnLoop: ary[7] });
+    </script>
+
+<div class="contentpart" style="background: #fff;" >
+      <div class="container">
+        <div class="parttitle text-center">
+          <h2>赛事动态</h2>
+          <p>最新的vex培训赛事</p>
+        </div>
+        <div class="indexnews">
+          <div id="slideBox1" class="slideBox1">
+            <div class="bd">
+              <ul>
+                <stl:contents channelIndex="赛事动态" scope="SelfAndChildren" totalNum="3" order="AddDate">
+                  <li>
+                    <div class="newstext">
+                      <div class="newstime"> <stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content> </div>
+                      <div class="newstit"> <stl:content type="Title" wordNum="23" ellipsis="..."></stl:content> </div>
+                      <p class="newszy"> <stl:content type="Summary" wordNum="60" ellipsis="..."></stl:content> </p>
+                      <stl:a class="newsmore"> 查看详情 </stl:a> </div>
+                    <div class="newsimg"> <img width="456" height="287" src="{Content.ImageUrl}" class="attachment-news-thumb size-news-thumb wp-post-image"  alt="{Content.Title}" /> </div>
+                    <div class="clearfix"></div>
+                  </li>
+                </stl:contents>
+              </ul>
+            </div>
+            <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div>
+          <script id="jsID" type="text/javascript">
+            jQuery(".slideBox1").slide({mainCell:".bd ul",effect:"left",autoPlay:true,delayTime:1000});
+          </script> 
+        </div>
+      </div>
+    </div>
+
+    <div class="contentpart" style="background:#d8d8d8 url({stl.siteurl}/images/bg.jpg) no-repeat center center fixed !important;">
+      <div class="container">
+        <div class="indexabout text-center">
+          <stl:contents channelIndex="公司简介" totalNum="1">
+            <h4><stl:content type="Title"></stl:content></h4>
+            <h2><stl:content type="SubTitle"></stl:content></h2>
+            <p><stl:content type="Summary" wordNum="100"></stl:content></p>
+            <a href="{Channel.NavigationUrl_公司简介}" target="_blank"> 查看详情 </a> 
+          </stl:contents>
+        </div>
+      </div>
+    </div>
+    <div class="contentpart">
+      <div class="container">
+        <div class="parttitle text-center">
+          <h2>VEX 2017-2018赛季视频</h2>
+        </div>
+        <div class="productpart">
+          <div id="dd"  style=" background-color: #f9f9f9 !important;text-align:  center; margin-top: 32px;">
+           <iframe allowfullscreen="" 
+data-src="https://v.qq.com/iframe/preview.html?vid=z06349vl2al&amp;width=900&amp;height=420&amp;auto=0"
+ src="https://v.qq.com/iframe/player.html?vid=z06349vl2al&amp;width=900&amp;height=420&amp;auto=0" 
+width="900" height="420" style="border:0;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <stl:include file="/include/footer.html"></stl:include>
+    <stl:include file="/include/right_bar.html"></stl:include>
+    <stl:include file="/include/foot_js.html"></stl:include>
+  </body>
+</html>
